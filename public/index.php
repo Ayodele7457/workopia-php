@@ -1,8 +1,5 @@
 <?php
-require '../helpers.php';
-require basePath('/views/partials/head.php');
-require basePath('/views/partials/nav.php');
+include_once '../helpers.php';
 
-require basePath('/views/home.view.php');
-require basePath('/views/partials/footer.php');
+loadView('home');
 
