@@ -15,7 +15,12 @@ function basePath($path = '') : string {
  */
 
  function loadView($name){
-    require basePath("views/{$name}.view.php");
+    $filePath = basePath("views/{$name}.view.php");
+    if (file_exists($filePath)){
+        require $filePath;
+    } else {
+        echo "The View: $name was not found bro";
+    }
  }
 
 
@@ -26,5 +31,11 @@ function basePath($path = '') : string {
  */
 
  function loadPartial($name){
-    require basePath("views/partials/{$name}.php");
+    $filePath = basePath("views/partials/{$name}.php");
+
+    if (file_exists($filePath)){
+        require $filePath;
+    } else {
+        echo "The Partial: $name was not found bro";
+    }
  }
