@@ -1,3 +1,5 @@
 <?php
 
-echo 'Listing page creation';
+include_once '../helpers.php';
+
+loadView('listings/create');

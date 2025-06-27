@@ -1,3 +1,5 @@
 <?php
 
-echo 'listings page';
+include_once '../helpers.php';
+
+loadView('listings/listings');

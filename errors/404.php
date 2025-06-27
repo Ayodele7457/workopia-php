@@ -1,3 +1,5 @@
-<?php 
+<?php
 
-echo 'This is the error page';
+include_once '../helpers.php';
+
+loadView('errors/404');
